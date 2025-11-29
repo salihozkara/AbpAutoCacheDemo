@@ -1,0 +1,113 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXLiteTheme": {
+      "version": "5.0.0",
+      "isInstalled": true,
+      "creationTime": "11/29/2025 11:55:45 +00:00"
+    },
+    "Volo.Abp.Account": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/29/2025 11:55:45 +00:00"
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/29/2025 11:55:45 +00:00"
+    },
+    "Volo.Abp.Identity": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/29/2025 11:55:45 +00:00"
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/29/2025 11:55:45 +00:00"
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/29/2025 11:55:45 +00:00"
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/29/2025 11:55:45 +00:00"
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "10.0.0",
+      "isInstalled": true,
+      "creationTime": "11/29/2025 11:55:45 +00:00"
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "AutoCacheDemo.Application": {
+      "path": "src/AutoCacheDemo.Application/AutoCacheDemo.Application.abppkg",
+      "folder": "src"
+    },
+    "AutoCacheDemo.Application.Tests": {
+      "path": "test/AutoCacheDemo.Application.Tests/AutoCacheDemo.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "AutoCacheDemo.Domain.Shared": {
+      "path": "src/AutoCacheDemo.Domain.Shared/AutoCacheDemo.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "AutoCacheDemo.Application.Contracts": {
+      "path": "src/AutoCacheDemo.Application.Contracts/AutoCacheDemo.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "AutoCacheDemo.HttpApi": {
+      "path": "src/AutoCacheDemo.HttpApi/AutoCacheDemo.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "AutoCacheDemo.HttpApi.Client": {
+      "path": "src/AutoCacheDemo.HttpApi.Client/AutoCacheDemo.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "AutoCacheDemo.Web": {
+      "path": "src/AutoCacheDemo.Web/AutoCacheDemo.Web.abppkg",
+      "folder": "src"
+    },
+    "AutoCacheDemo.Web.Tests": {
+      "path": "test/AutoCacheDemo.Web.Tests/AutoCacheDemo.Web.Tests.abppkg",
+      "folder": "test"
+    },
+    "AutoCacheDemo.EntityFrameworkCore.Tests": {
+      "path": "test/AutoCacheDemo.EntityFrameworkCore.Tests/AutoCacheDemo.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "AutoCacheDemo.EntityFrameworkCore": {
+      "path": "src/AutoCacheDemo.EntityFrameworkCore/AutoCacheDemo.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "AutoCacheDemo.TestBase": {
+      "path": "test/AutoCacheDemo.TestBase/AutoCacheDemo.TestBase.abppkg",
+      "folder": "test"
+    },
+    "AutoCacheDemo.Domain.Tests": {
+      "path": "test/AutoCacheDemo.Domain.Tests/AutoCacheDemo.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "AutoCacheDemo.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/AutoCacheDemo.HttpApi.Client.ConsoleTestApp/AutoCacheDemo.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "AutoCacheDemo.DbMigrator": {
+      "path": "src/AutoCacheDemo.DbMigrator/AutoCacheDemo.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "AutoCacheDemo.Domain": {
+      "path": "src/AutoCacheDemo.Domain/AutoCacheDemo.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}
