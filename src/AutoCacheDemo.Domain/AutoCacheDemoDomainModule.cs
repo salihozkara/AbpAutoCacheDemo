@@ -1,3 +1,6 @@
+using System;
+using AutoCache;
+using AutoCacheDemo.Books;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using AutoCacheDemo.Localization;
@@ -33,7 +36,8 @@ namespace AutoCacheDemo;
     typeof(AbpIdentityDomainModule),
     typeof(AbpOpenIddictDomainModule),
     typeof(AbpTenantManagementDomainModule),
-    typeof(BlobStoringDatabaseDomainModule)
+    typeof(BlobStoringDatabaseDomainModule),
+    typeof(AutoCacheModule)
     )]
 public class AutoCacheDemoDomainModule : AbpModule
 {
@@ -48,5 +52,7 @@ public class AutoCacheDemoDomainModule : AbpModule
 #if DEBUG
         context.Services.Replace(ServiceDescriptor.Singleton<IEmailSender, NullEmailSender>());
 #endif
+        
+        context.Services.AddAutoCache<Book, Guid>();
     }
 }

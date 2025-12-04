@@ -8,6 +8,7 @@ using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
 using System.Linq.Dynamic.Core;
+using AutoCache;
 
 namespace AutoCacheDemo.Books;
 
@@ -15,19 +16,24 @@ namespace AutoCacheDemo.Books;
 public class BookAppService : ApplicationService, IBookAppService
 {
     private readonly IRepository<Book, Guid> _repository;
+    private readonly AutoCacheManager _autoCacheManager;
 
-    public BookAppService(IRepository<Book, Guid> repository)
+    public BookAppService(IRepository<Book, Guid> repository, AutoCacheManager autoCacheManager)
     {
         _repository = repository;
+        _autoCacheManager = autoCacheManager;
     }
 
-    public async Task<BookDto> GetAsync(Guid id)
+    [Cache(typeof(Book), Scope = AutoCacheScope.Global)]
+    public virtual async Task<BookDto> GetAsync(Guid id)
     {
-        var book = await _repository.GetAsync(id);
-        return ObjectMapper.Map<Book, BookDto>(book);
+        var book = await _autoCacheManager.GetOrAddAsync(this, async () => await _repository.GetAsync(id), [id], invalidateOnEntities:
+            [typeof(Book)], scope: AutoCacheScope.Entity);
+        return ObjectMapper.Map<Book, BookDto>(book!);
     }
 
-    public async Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input)
+    [Cache(typeof(Book))]
+    public virtual async Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input)
     {
         var queryable = await _repository.GetQueryableAsync();
         var query = queryable

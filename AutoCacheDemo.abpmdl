@@ -108,6 +108,10 @@
     "AutoCacheDemo.Domain": {
       "path": "src/AutoCacheDemo.Domain/AutoCacheDemo.Domain.abppkg",
       "folder": "src"
+    },
+    "AutoCache": {
+      "path": "src/AutoCache/AutoCache.abppkg",
+      "folder": "src"
     }
   }
 }

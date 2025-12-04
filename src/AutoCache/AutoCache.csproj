@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>AutoCache</RootNamespace>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="10.0.0" />
+        <PackageReference Include="Volo.Abp.Core" Version="10.0.0" />
+        <PackageReference Include="Volo.Abp.Ddd.Domain" Version="10.0.0" />
+    </ItemGroup>
+
+</Project>
