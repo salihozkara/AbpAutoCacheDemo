@@ -1056,9 +1056,3 @@ By using declarative attributes, you can focus on business logic while AutoCache
 - [ABP Framework Documentation](https://docs.abp.io)
 - [Redis Documentation](https://redis.io/docs)
 - [StackExchange.Redis](https://github.com/StackExchange/StackExchange.Redis)
-
----
-
-**Version**: 1.0.0
-**Last Updated**: 2024-01-15
-**License**: MIT
